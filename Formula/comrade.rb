@@ -2,20 +2,20 @@ class Comrade < Formula
   desc "Serverless peer-to-peer terminal sharing over a punched p2p link"
   homepage "https://github.com/dangowrt/comrade"
   url "https://github.com/dangowrt/comrade.git",
-      tag:      "v0.1.0",
-      revision: "7a6b3b8f43a3e01bce94b6e402b1fd2dde45773e"
-  # No upstream tags yet: rather than pin a commit that goes stale, build the
-  # current tip of main. `brew install --HEAD comrade` and `brew upgrade
-  # --fetch-HEAD comrade` always track the latest source, and the build date is
-  # taken from the checked-out commit (SOURCE_DATE_EPOCH, honoured by the CMake
-  # build) so the result is reproducible.
+      tag:      "v0.1.1",
+      revision: "5d8e01000afa7c4c0d05ee04bd67e81f17b9bff5"
+  # The release CI stamps a stable `url` (the tagged commit) and a bottle block
+  # into this formula when it pushes the tap, so `brew install comrade` fetches a
+  # prebuilt bottle. `head` stays for `brew install --HEAD comrade`, which builds
+  # the current tip of main; the build date is taken from the checked-out commit
+  # (SOURCE_DATE_EPOCH, honoured by the CMake build) so the result is reproducible.
   head "https://github.com/dangowrt/comrade.git", branch: "main"
   license "AGPL-3.0-or-later"
 
   bottle do
-    root_url "https://github.com/dangowrt/comrade/releases/download/v0.1.0"
-    sha256 cellar: :any, arm64_tahoe: "69e618f2d759878c3dc494121e6a046036fc6825a032df5f8e249e5b6a133d5b"
-    sha256 cellar: :any, tahoe:       "e873b4ad734ef8a04660c369c5438befa6ee7417e20b48dafbda1231d59ee3f0"
+    root_url "https://github.com/dangowrt/comrade/releases/download/v0.1.1"
+    sha256 cellar: :any, arm64_tahoe: "fb5fde85dd32f0b82db7e29a918b445c760761a52376640e709f5529ecc937a9"
+    sha256 cellar: :any, tahoe:       "9d56651f55c10314a2e725ccd8e50615cd6cd35630477e83698fd4593f2d8247"
   end
 
   depends_on "cmake" => :build
@@ -28,9 +28,9 @@ class Comrade < Formula
   depends_on "openssl@3"
 
   def install
-    # Reproducible build date from the commit being built, not the clock. A
-    # --HEAD checkout has a .git to read; a release tarball does not, so the
-    # date is simply left to the CMake build's own fallback there.
+    # Reproducible build date from the commit being built, not the clock. Both
+    # the tagged (git url + revision) and --HEAD sources are git checkouts with a
+    # .git to read, so this applies to a release build too.
     if File.directory?(".git")
       epoch = Utils.safe_popen_read("git", "log", "-1", "--format=%ct").strip
       ENV["SOURCE_DATE_EPOCH"] = epoch unless epoch.empty?
