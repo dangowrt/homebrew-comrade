@@ -6,6 +6,12 @@ class Libdht < Formula
   sha256 "5f126d158979d14bcc17ed0debf4d875d662e8fc3fb3e71b29a8835e4044fdeb"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/dangowrt/comrade/releases/download/v0.1.7"
+    sha256 cellar: :any, arm64_tahoe: "612d028742a711e5d7786c8ad4f99811ce2423a9a36e2a24658b76ec5b231977"
+    sha256 cellar: :any, tahoe:       "72ab927dd08d600a3b570cd6c3f7640b4e2651a4f72c96f343d70a5a961f3ba2"
+  end
+
   # dht.c leaves four symbols (dht_hash, dht_random_bytes, dht_blacklisted,
   # dht_sendto) for the application to define; the consumer's executable
   # supplies them and the dynamic linker resolves them back at runtime. On
