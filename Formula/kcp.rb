@@ -6,9 +6,9 @@ class Kcp < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/dangowrt/comrade/releases/download/v0.1.9"
-    sha256 cellar: :any, arm64_tahoe: "6cb22ea9b6796ae52428a557ff550b016e98679fb4b977c38f42d78e1acecebb"
-    sha256 cellar: :any, tahoe:       "b9b85c79210c7abae2f4966174182319fec454d63531134032a4aac9e9d8ebdb"
+    root_url "https://github.com/dangowrt/comrade/releases/download/v0.1.10"
+    sha256 cellar: :any, arm64_tahoe: "8e22791c7791a0d654f24ea731e0841d59351fc4ce4053f69ff31ca9f3eea0a4"
+    sha256 cellar: :any, tahoe:       "eac83b50e54159974165ebcdf224542a1e1350490eb9a5073fac746d02c21832"
   end
 
   depends_on "cmake" => :build
