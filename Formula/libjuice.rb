@@ -6,9 +6,9 @@ class Libjuice < Formula
   license "MPL-2.0"
 
   bottle do
-    root_url "https://github.com/dangowrt/comrade/releases/download/v0.1.13"
-    sha256 cellar: :any, arm64_tahoe: "1b180d62589c9414d57d9a2f26fde14300adf9dada181039796e131b0aadd857"
-    sha256 cellar: :any, tahoe:       "0735e47e9b033c869a1c6989c2c5cc106866dc9178fb327b3fd3965cdeaf161a"
+    root_url "https://github.com/dangowrt/comrade/releases/download/v0.1.14"
+    sha256 cellar: :any, arm64_tahoe: "dff285b6ba3b42153d47aae398a88131cef2fe175ff813208e92cf799aab30a4"
+    sha256 cellar: :any, tahoe:       "47c55a39afd4a737809afe04e9d605f66a52c426cf0e9d29a0bb19cda8cb09e6"
   end
 
   depends_on "cmake" => :build
