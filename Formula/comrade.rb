@@ -2,8 +2,8 @@ class Comrade < Formula
   desc "Serverless peer-to-peer terminal sharing over a punched p2p link"
   homepage "https://github.com/dangowrt/comrade"
   url "https://github.com/dangowrt/comrade.git",
-      tag:      "v0.1.12",
-      revision: "00c8921cb4ba63dec309753f055058ba2ffd3260"
+      tag:      "v0.1.13",
+      revision: "823af36e84f71187c4b9716f5d5c40f51722a144"
   # The release CI stamps a stable `url` (the tagged commit) and a bottle block
   # into this formula when it pushes the tap, so `brew install comrade` fetches a
   # prebuilt bottle; libjuice, kcp and libdht get the same treatment, so the
@@ -15,9 +15,9 @@ class Comrade < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    root_url "https://github.com/dangowrt/comrade/releases/download/v0.1.12"
-    sha256 cellar: :any, arm64_tahoe: "ff40a896f24d9da94429678d0d05ef1ee8ffc5f4aad2a4c69572743a26d0bba8"
-    sha256 cellar: :any, tahoe:       "4b8505e50d50c6b0ad6ea244f76abb67b1bb6c44ac40d98a5f05c727f4201367"
+    root_url "https://github.com/dangowrt/comrade/releases/download/v0.1.13"
+    sha256 cellar: :any, arm64_tahoe: "61ee9f56d99a281f9288335c42e21b59302a4a89a47b443d1d4c871f4af60c8a"
+    sha256 cellar: :any, tahoe:       "185556b1a87ab44a9feb7b3b680b8cc1873e46a53c8f7a3401585662fa5f76fc"
   end
 
   depends_on "cmake" => :build
