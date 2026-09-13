@@ -7,9 +7,9 @@ class Libdht < Formula
   license "MIT"
 
   bottle do
-    root_url "https://github.com/dangowrt/comrade/releases/download/v0.2.1"
-    sha256 cellar: :any, arm64_tahoe: "eb44089e7a53e025f98315a4af0fd862fa29ad417bd159cb10367d3efaf823dc"
-    sha256 cellar: :any, tahoe:       "806ea776308b0ba594573f89f7c285941a95889f99ba7339e9de3fd3d4a3797b"
+    root_url "https://github.com/dangowrt/comrade/releases/download/v0.2.2"
+    sha256 cellar: :any, arm64_tahoe: "f5b33d0b773f911e75cc0d578b1f92120404e8ba504a6b3db0ab01ab7ce66f94"
+    sha256 cellar: :any, tahoe:       "dd5be9a59cd9c3efae10d4cc69f28938ed0e5c5061f146a3cc83df391593d4d3"
   end
 
   # dht.c leaves four symbols (dht_hash, dht_random_bytes, dht_blacklisted,
