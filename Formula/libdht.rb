@@ -9,8 +9,8 @@ class Libdht < Formula
   version_scheme 1
 
   bottle do
-    root_url "https://github.com/dangowrt/comrade/releases/download/v0.3.2"
-    sha256 cellar: :any, arm64_tahoe: "e97bcfd639bbe23a1c69efb58dfefeaa3001e041a26d0bce651e4bad52fa36c3"
+    root_url "https://github.com/dangowrt/comrade/releases/download/v0.3.3"
+    sha256 cellar: :any, arm64_tahoe: "e2e67d006c15c1ac29a88300cc7caf22f33efc347e88edd0507d3699a18bdccc"
   end
 
   # dht.c leaves four symbols (dht_hash, dht_random_bytes, dht_blacklisted,
