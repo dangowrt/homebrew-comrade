@@ -2,8 +2,8 @@ class Comrade < Formula
   desc "Serverless peer-to-peer terminal sharing over a punched p2p link"
   homepage "https://github.com/dangowrt/comrade"
   url "https://github.com/dangowrt/comrade.git",
-      tag:      "v0.3.1",
-      revision: "0a145bd32cd92a52dba1447c011570d627860478"
+      tag:      "v0.3.2",
+      revision: "6076647a46afcf30fafe09f14ec4b5ba91815078"
   # The release CI stamps a stable `url` (the tagged commit) and a bottle block
   # into this formula when it pushes the tap, so `brew install comrade` fetches a
   # prebuilt bottle; libjuice, kcp and libdht get the same treatment, so the
@@ -15,9 +15,9 @@ class Comrade < Formula
   license "AGPL-3.0-or-later"
 
   bottle do
-    root_url "https://github.com/dangowrt/comrade/releases/download/v0.3.1"
-    sha256 cellar: :any,                 arm64_tahoe: "d26e016fcbea7a06c5f213a9f4dbc616af8085cf4eebfa6188ec9eba230caf24"
-    sha256 cellar: :any_skip_relocation, tahoe:       "55287cc563061ce2f777046abe371890d8152ae3014dddc5dfc91ea12bd0ff5b"
+    root_url "https://github.com/dangowrt/comrade/releases/download/v0.3.2"
+    sha256 cellar: :any,                 arm64_tahoe: "5908d502eade17542addda8dbe96463f594d1b66febf2f46d646b336547b4f8b"
+    sha256 cellar: :any_skip_relocation, tahoe:       "d16e474cd2aa8688748e8fee7269b5d9cdbc7ac9a1ee4a1e3f99074cbc2d8ac1"
   end
 
   depends_on "cmake" => :build
@@ -51,13 +51,13 @@ class Comrade < Formula
     end
 
     resource "monocypher" do
-      url "https://monocypher.org/download/monocypher-4.0.2.tar.gz"
-      sha256 "38d07179738c0c90677dba3ceb7a7b8496bcfea758ba1a53e803fed30ae0879c"
+      url "https://monocypher.org/download/monocypher-4.0.3.tar.gz"
+      sha256 "8cc9bc341a66249016db9bd70e9142d8d0aef9945973744b1ac05dbc55d8ee66"
     end
 
     resource "libjuice" do
-      url "https://github.com/paullouisageneau/libjuice/archive/refs/tags/v1.7.3.tar.gz"
-      sha256 "86e075ca4732882746b6d5733ff1b6090f942e5750df58630b191b5f00f30010"
+      url "https://github.com/paullouisageneau/libjuice/archive/refs/tags/v1.7.4.tar.gz"
+      sha256 "95c088862aa1b88b73d62aa99577135010eb768fcafb252d13aa85a8515ef798"
     end
 
     resource "kcp" do
@@ -66,8 +66,8 @@ class Comrade < Formula
     end
 
     resource "dht" do
-      url "https://github.com/jech/dht/archive/0bbb8f4a5bd914b60de5e9fbb51573aa33a1cf18.tar.gz"
-      sha256 "5f126d158979d14bcc17ed0debf4d875d662e8fc3fb3e71b29a8835e4044fdeb"
+      url "https://github.com/jech/dht/archive/refs/tags/dht-0.28.tar.gz"
+      sha256 "2f91db29636ca84503b4bb59d7a4a6a681c3a547e12ef775f83e99b69be92f2d"
     end
   end
 
